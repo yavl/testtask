@@ -30,11 +30,9 @@ class AlbumPresenter {
     }
     
     func onRefreshControl() {
-        DispatchQueue.main.async {
-            ImageLoader.clearCache()
-            self.imageUrls = self.defaultImageUrls
-            self.view.reloadCollectionView()
-        }
+        ImageLoader.clearCache()
+        self.imageUrls = self.defaultImageUrls
+        self.view.reloadCollectionView()
     }
     
     func onRemoveItem(at index: Int) {
